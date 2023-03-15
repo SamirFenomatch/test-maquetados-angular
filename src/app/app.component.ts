@@ -10,11 +10,14 @@ export class AppComponent implements OnInit {
 
   title = 'test-maquetado-angular';
 
-  public start = "01/14/2016 12:00:00"
-  public end = "01/19/2016 12:00:00"
+  public start = "01/14/2016 03:00:00"
+  public end = "01/14/2016 12:00:00"
   public diff: any;
   public min: any;
   public hours: any[] = [];
+
+  public totalHours: number | undefined;
+  public tickInterval: number | undefined;
 
   constructor() {
 
@@ -26,9 +29,11 @@ export class AppComponent implements OnInit {
 
   public formatLabel(value: number): string {
 
-    console.log(value)
+    console.log(value);
     
     let valueDate = new Date(value);
+
+    console.log(valueDate.getHours())
 
     let days = valueDate.getDay();
     let hours = valueDate.getHours();
@@ -53,9 +58,10 @@ export class AppComponent implements OnInit {
     this.min = minDate.getTime();
     this.diff = maxDate.getTime();
 
+
     let totalMinutes = (this.diff - this.min) / 60000;
-    let totalHours = totalMinutes / 60;
-    this.getTimeline(totalHours)
+    this.totalHours = totalMinutes / 60;
+    this.getTimeline(this.totalHours)
 
   }
 

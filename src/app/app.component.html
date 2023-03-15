@@ -4,11 +4,11 @@
 
     <div class="swiper-container text-center"> 
 
-      <mat-slider [min]="min" [max]="diff" [step]="1" showTickMarks discrete [displayWith]="formatLabel">
-        <input matSliderThumb>
+      <mat-slider [min]="0" [max]="120" [step]="1" [tickInterval]="24" thumbLabel discrete [displayWith]="formatLabel">
+        
       </mat-slider>
 
-      <div>
+      <div class="content-timeline">
 
         <div class="swiper-wrapper" *ngFor="let h of hours">
           <div class="swiper-slide">
