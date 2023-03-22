@@ -1,0 +1,25 @@
+<!-- <div class="range-slider" style='--min:0; --max:100; --step:5; --value:75; --text-value:"75";'>
+    <input type="range" min="0" max="100" step="1" value="75" oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify(this.value))">
+    <output></output>
+    <div class='range-slider__progress'></div>
+  </div>
+  
+
+  <div class="range">
+    <input type="range" min="0" max="5">
+    
+  </div> -->
+
+  <div class="container">
+
+    <input class="slider" type="range" min="{{hours[0].label}}" max="{{totalHours}}" step="1" value="{{totalHours}}" (input)="valueChanged($event)">
+
+  
+    <div class="ticks">
+        <!-- You could generate the ticks based on your min, max & step values. -->
+        <span  *ngFor="let h of hours" class="tick">
+            <span *ngIf="h.visible">{{h.label}}</span> <!--*ngIf="h.visible"-->
+        </span>
+      </div>
+  
+  </div>

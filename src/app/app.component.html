@@ -1,11 +1,23 @@
 
-<div>
+<app-slider></app-slider>
+
+<!-- <div>
   <section class="time-line-box">
 
     <div class="swiper-container text-center"> 
 
       <mat-slider [min]="0" [max]="120" [step]="1" [tickInterval]="24" thumbLabel discrete [displayWith]="formatLabel">
-        
+      
+        <input matSliderThumb #values>
+
+        <datalist id="values" class="list">
+          <option value="0" label="0"></option>
+          <option value="5000" label="5000"></option>
+          <option value="10000" label="10000"></option>
+          <option value="15000" label="15000"></option>
+          <option value="20000" label="20000"></option>
+        </datalist>
+
       </mat-slider>
 
       <div class="content-timeline">
@@ -23,4 +35,18 @@
 
   </section>
 
-</div>
+</div> -->
+
+<!-- <div class="container">
+
+  <input class="slider" type="range" min="2" max="10" step="1" list="values" value="2">
+
+  <datalist id="values" class="list">
+    <option value="2" label="2"></option>
+    <option value="4" label="4"></option>
+    <option value="6" label="6"></option>
+    <option value="8" label="8"></option>
+    <option value="10" label="10"></option>
+  </datalist>
+
+</div> -->

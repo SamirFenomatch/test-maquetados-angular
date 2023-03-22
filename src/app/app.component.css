@@ -86,3 +86,36 @@
   ::ng-deep .mat-slider-horizontal {
     width: 100%;
   }
+
+
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .slider {
+    accent-color: rgb(1, 225, 255);
+    background: white;
+    min-width: min(20rem, 60vw);
+  }
+
+  .list {
+    display: flex;
+      justify-content: space-between;
+      height: auto;
+      overflow: hidden;
+  }
+
+  .current-value {
+    position: absolute;
+    top: -2.5em;
+    left: 50%;
+    width: 60px;
+    height: 1em;
+    text-align: center;
+    color: #81b5cc;
+    font-weight: bold;
+    white-space: nowrap;
+  }
